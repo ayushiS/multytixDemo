@@ -1,0 +1,20 @@
+<h1>MultyTix</h1>
+
+
+
+<%= form_tag do %>
+  <%= label_tag(:my_name, "My name is:") %>
+  <%= text_field_tag(:my_name) %>
+
+  <%= label_tag(:my_phone, "Phone #:") %>
+  <%= text_field_tag(:my_phone) %>
+
+  <%= submit_tag("Process") %>
+<% end %>
+
+
+
+
+<%= select_tag(:city_id, options_for_select([['Lisbon', 1], ['Madrid', 2],['Paris', 3]])) %>
+
+<%= link_to "Index", :action => "index" %>
