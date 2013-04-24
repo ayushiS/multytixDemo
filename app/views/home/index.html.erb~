@@ -3,18 +3,26 @@
 
 
 <%= form_tag do %>
-  <%= label_tag(:my_name, "My name is:") %>
-  <%= text_field_tag(:my_name) %>
-
-  <%= label_tag(:my_phone, "Phone #:") %>
-  <%= text_field_tag(:my_phone) %>
-
-  <%= submit_tag("Process") %>
+  <p>
+	  <%= label_tag(:name, "My name is:") %>
+    <%= text_field_tag(:name) %>
+	</p>
+	<p>
+    <%= label_tag(:my_phone, "Phone #:") %>
+    <%= text_field_tag(:my_phone) %>
+	</p>
+	<p>
+    <%= label_tag(:my_wristband, "Wristband ID:") %>
+    <%= text_field_tag(:my_wristband) %>
+	</p>
+	<p>
+    <%= label_tag(:my_email, "Email:") %>
+    <%= text_field_tag(:my_email) %>
+	</p>
+  <p>
+		Amount of money to load:
+		<%= select_tag(:amount, options_for_select([['$1', 1], ['$5', 2],['$10', 3],['$20', 4]])) %>
+	</p>
+  <%= submit_tag("Submit") %>
 <% end %>
 
-
-
-
-<%= select_tag(:city_id, options_for_select([['Lisbon', 1], ['Madrid', 2],['Paris', 3]])) %>
-
-<%= link_to "Index", :action => "index" %>

@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
   def index
-    print "INDEXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    print "GOING TO PRINT SOMETHING >>>>>>>"
+		if params[:email]
+			print "Email: ", params[:email]
+			UserMailer.send_email(email_things, params[:email]).deliver
+		else
+			print "Params: ", params
+		end
   end
 end
